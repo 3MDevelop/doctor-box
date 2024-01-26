@@ -33,7 +33,7 @@
 
 .appContainer {
   height: 100vh;
-  background-color: rgb(18, 207, 193);
+  background-color: #12cfc1;
   box-shadow: 0 0 5px 4px rgba(18, 207, 193, 0.1);
 }
 
@@ -52,6 +52,17 @@
   background-color: #12cfc1;
 }
 
+.appFooter > div {
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+  padding: 0 0.7rem;
+  border-left: 2px solid white;
+}
+
+.appFooter :last-child {
+  border: 0;
+}
+
 #sideMenu {
   height: 100%;
   width: 250px;
@@ -61,11 +72,10 @@
   right: -250px;
   background-color: rgba(5, 116, 108, 0.8);
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 50px;
+  transition: 0.6s ease-in-out;
+  padding-top: 110px;
   padding-right: 15px;
   text-align: right;
-  
 }
 
 /* Style the side menu links */
@@ -83,16 +93,29 @@
 /* Change the link color on hover */
 #sideMenu div:hover {
   cursor: pointer;
-  color: #f1f1f1;
+  color: #cacaca;
 }
 
 /* Position and style the close button */
 #sideMenu .close-btn {
-  border-bottom:0;
+  border-bottom: 0;
   position: absolute;
-  margin: 0;
   top: 0;
-  left: 0;
+  left: 10px;
   font-size: 36px;
-  margin-left: 10px;
+}
+
+.remainderLable {
+  position: absolute;
+  bottom: -2px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  padding: 0 3px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
 }

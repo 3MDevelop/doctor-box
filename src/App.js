@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import SideMenu from './components/SideMenu'
@@ -14,20 +14,21 @@ library.add(fab, fas, far);
 
 
 const App = () => {
+  const [showSide, setShowSide] = useState(false)
+
+  const showSideHandler = () => {
+    setShowSide(prevShowSide => !prevShowSide);
+  };
+
   return (
     <div className='mainContainer container-fluid d-flex flex-column align-items-center p-0 m-0'>
       <div className='appContainer col-12 col-md-8 d-flex flex-column'>
-        <SideMenu />
-        <HeaderSection />
+        <HeaderSection showSideHandler={showSideHandler}/>
+        <SideMenu showSide={showSide} setShowSide={setShowSide} />
         <BodySection />
-
       </div>
     </div>
 
-
-
-    /* <div className="App text-white d-flex flex-column align-items-center justify-content-between container-fluid">
-    </div> */
   );
 }
 
