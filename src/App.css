@@ -1,5 +1,10 @@
-.App {
+.mainContainer {
   text-align: center;
+  background-color: rgb(248, 248, 248);
+  /* background-color: #282c34; */
+  min-height: 100vh;
+
+  font-size: calc(7px + 2vmin);
 }
 
 .App-logo {
@@ -13,20 +18,9 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +29,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.appContainer {
+  height: 100vh;
+  background-color: rgb(18, 207, 193);
+  box-shadow: 0 0 5px 4px rgba(18, 207, 193, 0.1);
+}
+
+.appHeader {
+  height: 7rem;
+}
+
+.appBody {
+  border-radius: 1rem 1rem 0 0;
+  padding-top: 0.5rem;
+  background-color: white;
+}
+
+.appFooter {
+  border-radius: 10px 10px 0 0;
+  background-color: #12cfc1;
+}
+
+#sideMenu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: -250px;
+  background-color: rgba(5, 116, 108, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+  padding-right: 15px;
+  text-align: right;
+  
+}
+
+/* Style the side menu links */
+#sideMenu div {
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+  margin: 1rem 0;
+  transition: 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Change the link color on hover */
+#sideMenu div:hover {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+/* Position and style the close button */
+#sideMenu .close-btn {
+  border-bottom:0;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  margin-left: 10px;
 }
