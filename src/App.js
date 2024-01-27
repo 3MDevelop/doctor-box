@@ -3,7 +3,8 @@ import './App.css';
 
 import SideMenu from './components/SideMenu'
 import HeaderSection from './components/HeaderSection'
-import BodySection from './components/BodySection'
+import FooterSection from './components/FooterSection'
+import HomePage from './components/HomePage';
 
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -15,6 +16,8 @@ library.add(fab, fas, far);
 
 const App = () => {
   const [showSide, setShowSide] = useState(false)
+ 
+
 
   const showSideHandler = () => {
     setShowSide(prevShowSide => !prevShowSide);
@@ -23,9 +26,12 @@ const App = () => {
   return (
     <div className='mainContainer container-fluid d-flex flex-column align-items-center p-0 m-0'>
       <div className='appContainer col-12 col-md-8 d-flex flex-column'>
-        <HeaderSection showSideHandler={showSideHandler}/>
+        <HeaderSection showSideHandler={showSideHandler} />
         <SideMenu showSide={showSide} setShowSide={setShowSide} />
-        <BodySection />
+        <div className='appBody flex-fill d-flex flex-column justify-content-end align-items-center '>
+          <HomePage />
+          <FooterSection />
+        </div>
       </div>
     </div>
 
