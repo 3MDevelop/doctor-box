@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-const SideMenu = ({ showSide, setShowSide }) => {
+const SideMenu = ({ showSide, setShowSide, handlePageChange }) => {
     const [menuPosition, setMenuPosition] = useState(showSide ? "0" : "-100%");
     const menuRef = useRef(null);
 
@@ -21,9 +21,9 @@ const SideMenu = ({ showSide, setShowSide }) => {
     return (
         <div id="sideMenu" ref={menuRef} style={{ right: menuPosition }}>
             <div className="close-btn" onClick={() => setShowSide(false)}>&times;</div>
-            <div>Profile</div>
-            <div>Contact</div>
-            <div>Contact</div>
+            <div onClick={() => { handlePageChange('home') }}>Profile</div>
+            <div onClick={() => { handlePageChange('profile') }}>Contact</div>
+            <div onClick={() => { handlePageChange('chat') }}>Help</div>
         </div>
     );
 };
