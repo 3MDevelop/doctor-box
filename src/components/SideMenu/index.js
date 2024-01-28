@@ -34,8 +34,8 @@ const SideMenu = ({ showSide, setShowSide, handlePageChange }) => {
             <div onClick={() => { handlePageChange('home') }}>Profile</div>
             <div onClick={() => { handlePageChange('profile') }}>Contact</div>
             <div onClick={() => { handlePageChange('chat') }}>Help</div>
-            <div onClick={() => { setCookie() }}>setCookie</div>
-            <div onClick={() => { clearCookie() }}>clearCookie</div>
+            <div onClick={() => { setCookie() }}>setUser</div>
+            <div onClick={() => { clearCookie() }}>removeUser</div>
         </div>
     );
 };

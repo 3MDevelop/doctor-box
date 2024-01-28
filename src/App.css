@@ -119,3 +119,7 @@
   align-items: center;
   font-size: 0.6rem;
 }
+
+.activeIcon {
+  border-bottom: 3px solid  rgba(5, 116, 108, 0.8) !important;
+}
